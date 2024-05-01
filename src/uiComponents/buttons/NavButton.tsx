@@ -9,13 +9,14 @@ interface props {
 
 export default function NavButton({path}:props){
     const pathname = usePathname()
+
     return (
-        <Link href={path.path} className={`h-[40px] leading-[40px] pl-2 pr-2 flex gap-2 
-        ${pathname.endsWith(path.path)?"text-primary-950":"bg-transparent"} ` +
+        <Link href={path.path} className={`h-[40px] leading-[40px] bg-primary rounded-full pl-4 pr-4 flex justify-center 
+        ${pathname.endsWith(path.path)?"bg-secondary text-primary":" "} ` +
             "hover:bg-secondary-700"}
         >
             <span>{path.text}</span>
-            {path.icon && <path.icon className={'m-auto'} />}
+            {path.icon && <path.icon className={'mt-auto mb-auto'} />}
         </Link>
     )
 }

@@ -17,10 +17,51 @@
   padding: 0;
   border: transparent;
   position: relative;
+  @apply transition-all;
 }
 body {
-  @apply max-w-[100vw] bg-primary;
+  @apply w-full bg-primary;
+}
+
+h2 {
+  @apply text-[4vmax] font-black;
 }
 .underline-it {
   @apply border border-solid border-b-2
 }
+
+.white-hover::before {
+  content: "";
+  position: absolute;
+  @apply w-full h-[80vh] z-[1] bg-gradient-to-t from-primary to-transparent;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.we-deliver-parent {
+  img{
+    object-position: 100% 50%;
+  }
+  & .we-deliver {
+    &::after{
+      content: "";
+      @apply w-full h-full top-0 left-0 absolute z-[1] bg-gradient-to-b from-primary to-transparent;
+    }
+  }
+
+}
+
+button{
+
+  &.primary{
+    @apply bg-secondary text-primary hover:bg-secondary-400 active:bg-secondary-600;
+  }
+  &.secondary{
+    @apply bg-accent text-primary hover:bg-accent-400 active:bg-accent-600;
+  }
+  &.danger {
+    @apply bg-red-500 text-primary hover:bg-red-400 active:bg-red-600;
+  }
+}
+

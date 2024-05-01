@@ -12,7 +12,7 @@ export default function NavigationBar(){
         {text: "Cart", path: "/cart", icon: BiCart},
     ]
     return <nav
-        className={"w-[100vw] h-navBar flex justify-between bg-secondary-500 text-white leading-[50px] pl-2 pr-2 "}>
+        className={"w-full h-navBar z-50 sticky top-0 flex justify-between bg-transparent text-secondary-700 leading-[50px] pl-2 pr-2 "}>
         <Link href={'/'} className={'reenie-h1 h-max'}>
             KickRocks
         </Link>

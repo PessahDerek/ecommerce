@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import {ProductObject} from "../../my-types";
+import {ProductObject} from "../../../my-types";
 import Image from "next/image";
 
 
@@ -19,7 +19,7 @@ const ListProduct = ({product, ...rest}: props) => {
             onMouseOver={e=>{
                 e.currentTarget.scrollIntoView({block: 'nearest', behavior: 'smooth', inline: "nearest"})
             }}
-            className={`w-full min-w-[300px] h-[50vh] cursor-pointer hover:scale-[99.5%] bg-white hover:shadow-xl overflow-hidden active:shadow-none rounded-xl ${rest.className ?? ''}`}
+            className={`w-full md:min-w-[300px] min-h-[300px] max-h-[50vh] cursor-pointer hover:scale-[99.5%] bg-white hover:shadow-xl overflow-hidden active:shadow-none rounded-xl ${rest.className ?? ''}`}
         >
             <Image
                 src={product.images[0]}
@@ -29,7 +29,7 @@ const ListProduct = ({product, ...rest}: props) => {
                 priority={true}
                 className={` ${hover ? "scale-110" : ""}`}
             />
-            <div className={`absolute bottom-0 grid p-4 bg-white rounded-t-full ${hover?"rounded-t-none w-full":""}`}>
+            <div className={`absolute bottom-0 grid p-4 bg-white rounded-t-full ${hover?"rounded-t-none w-full":"bg-opacity-50"}`}>
                 <div className={"grid"}>
                     {product.discount ?
                         <span className={"grid"}>
@@ -44,6 +44,9 @@ const ListProduct = ({product, ...rest}: props) => {
                             {product.price}/=
                         </strong>
                     }
+                    <span>
+                        {product.brand}
+                    </span>
                     <span>
                         {product.name}
                     </span>

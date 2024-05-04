@@ -1,6 +1,6 @@
 'use client'
 import Link from "next/link";
-import {NavPath} from "../../../my-types";
+import {NavPath} from "../../../../my-types";
 import {usePathname} from "next/navigation";
 
 interface props {

@@ -1,17 +1,17 @@
-import {ShoeCategory} from "../../../my-types";
-import ShowCategory from "@/components/home/ShowCategory";
-import unisex from "@/assets/images/unisex.jpeg";
-import kids from "@/assets/images/kids.jpeg"
-import sports from "@/assets/images/sports.jpeg"
-import discounted from "@/assets/images/discounted.jpeg"
-import mens from "@/assets/images/mens.jpeg"
-import ladies from "@/assets/images/womens.jpeg"
-import casual from "@/assets/images/casual.jpeg"
+import {ProductCategoryType} from "../../../../my-types";
+import ShowCategory from "@/lib/components/home/ShowCategory";
+import unisex from "@/lib/assets/images/unisex.jpeg";
+import kids from "@/lib/assets/images/kids.jpeg"
+import sports from "@/lib/assets/images/sports.jpeg"
+import discounted from "@/lib/assets/images/discounted.jpeg"
+import mens from "@/lib/assets/images/mens.jpeg"
+import ladies from "@/lib/assets/images/womens.jpeg"
+import casual from "@/lib/assets/images/casual.jpeg"
 import {StaticImageData} from "next/image";
 
 
 const CategoriesBanner = () => {
-    const categories: Array<{ category: ShoeCategory, image: string | StaticImageData }> = [
+    const categories: Array<{ category: ProductCategoryType, image: string | StaticImageData }> = [
         {category: "Unisex", image: unisex},
         {category: "Men", image: mens},
         {category: "Ladies", image: ladies},

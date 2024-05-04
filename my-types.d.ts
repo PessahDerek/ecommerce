@@ -13,14 +13,17 @@ declare type Banner = {
 }
 
 declare interface ProductObject {
+    _id: string;
     brand: string;
     name: string;
     price: number;
     images: Array<string | StaticImageData>
-    category: ShoeCategory[]
+    category: ProductCategoryType[]
     discount?: number;
 }
 
+declare type ProductList = { category: string | ProductCategoryType, products: ProductObject[] }[]
+
 declare type ButtonTypes = 'primary' | 'secondary' | 'danger';
 
-declare type ShoeCategory = "Unisex" | "Men" | "Ladies" | "Kids" | "Sports" | "Casual" | "Discounted"
+declare type ProductCategoryType = "Unisex" | "Men" | "Ladies" | "Kids" | "Sports" | "Casual" | "Discounted"

@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import img1 from "@/assets/images/landing1.jpeg";
+import img1 from "@/lib/assets/images/landing1.jpeg";
 
 export default function BannerCarousel() {
 

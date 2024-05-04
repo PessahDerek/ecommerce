@@ -1,5 +1,5 @@
 import React from "react";
-import Aos from "@/utils/aos";
+import Aos from "@/lib/utils/aos";
 import {Inter} from "next/font/google";
 
 const inter = Inter({subsets: ["latin"]});

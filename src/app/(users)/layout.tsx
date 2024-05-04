@@ -1,9 +1,10 @@
 import type {Metadata} from "next";
 import {Inter} from "next/font/google";
 import "../globals.css";
-import NavigationBar from "@/uiComponents/navigation/NavigationBar";
+import NavigationBar from "@/lib/uiComponents/navigation/NavigationBar";
 import React from "react";
-import Aos from "@/utils/aos";
+import Aos from "@/lib/utils/aos";
+import ProductsStore from "@/lib/stores/ProductsStore";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -20,9 +21,11 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body className={inter.className}>
-        <Aos />
-        <NavigationBar/>
-        {children}
+        <Aos/>
+        <ProductsStore>
+            <NavigationBar/>
+            {children}
+        </ProductsStore>
         </body>
         </html>
     );

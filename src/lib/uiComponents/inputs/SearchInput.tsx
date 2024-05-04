@@ -1,5 +1,5 @@
 import {BiSearch} from "react-icons/bi";
-import TextInput from "@/uiComponents/inputs/TextInput";
+import TextInput from "@/lib/uiComponents/inputs/TextInput";
 import React, {useMemo, useState} from "react";
 import {MdClear} from "react-icons/md";
 

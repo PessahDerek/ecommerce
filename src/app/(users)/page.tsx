@@ -1,9 +1,9 @@
-import BannerCarousel from "@/components/home/BannerCarousel";
-import CategoriesBanner from "@/components/home/CategoriesBanner";
-import HomeListProducts from "@/components/home/HomeListProducts";
-import {dummyData} from "@/utils/dummyData";
+import BannerCarousel from "@/lib/components/home/BannerCarousel";
+import CategoriesBanner from "@/lib/components/home/CategoriesBanner";
+import HomeListProducts from "@/lib/components/home/HomeListProducts";
+import {dummyData} from "@/lib/utils/dummyData";
 import Image from "next/image";
-import delivery from '@/assets/images/delivery.jpeg'
+import delivery from '@/lib/assets/images/delivery.jpeg'
 
 
 export default function Home() {
@@ -34,7 +34,7 @@ export default function Home() {
                     <span className={'m-auto text-center z-[5]'}>
                         <h1 className={'text-[6vmax] font-black text-secondary-50'}>We deliver to Mars</h1>
                         <span className={'text-[4vmax] text-white font-bold'}>
-                            You&apos;ll get the shoe no matter where you are
+                            You&apos;ll get the shoes no matter where you are, that&apos;s a promise
                         </span>
                     </span>
                 </div>

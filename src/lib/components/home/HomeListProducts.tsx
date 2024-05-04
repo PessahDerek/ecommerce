@@ -1,7 +1,7 @@
 import {HtmlHTMLAttributes} from "react";
-import {ProductObject} from "../../../my-types";
-import Button from "@/uiComponents/buttons/Button";
-import ListProduct from "@/components/ListProduct";
+import {ProductObject} from "../../../../my-types";
+import Button from "@/lib/uiComponents/buttons/Button";
+import ListProduct from "@/lib/components/ListProduct";
 import {initialEnv} from "@next/env";
 import {BsArrowRight} from "react-icons/bs";
 

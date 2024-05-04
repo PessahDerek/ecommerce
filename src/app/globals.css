@@ -52,16 +52,31 @@ h2 {
 
 }
 
-button{
+input {
+  outline: transparent;
+  &:focus{
+    outline: transparent !important;
+  }
+}
 
+button{
   &.primary{
     @apply bg-secondary text-primary hover:bg-secondary-400 active:bg-secondary-600;
+    &.outlined {
+      @apply bg-transparent border border-solid border-secondary text-secondary  ;
+    }
   }
   &.secondary{
     @apply bg-accent text-primary hover:bg-accent-400 active:bg-accent-600;
+    &.outlined {
+      @apply bg-transparent border border-solid border-accent text-accent hover:border-accent-400 active:bg-accent-50 active:text-accent-600;  ;
+    }
   }
   &.danger {
     @apply bg-red-500 text-primary hover:bg-red-400 active:bg-red-600;
+    &.outlined {
+      @apply bg-transparent border border-solid border-red-500 text-red-500  ;
+    }
   }
 }
 

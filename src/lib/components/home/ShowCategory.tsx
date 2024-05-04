@@ -1,21 +1,24 @@
 'use client'
 import React from "react";
-import {ShoeCategory} from "../../../my-types";
+import {ProductCategoryType} from "../../../../my-types";
 import Image, {StaticImageData} from "next/image";
+import {useRouter} from "next/navigation";
 
 interface props extends React.HtmlHTMLAttributes<HTMLDivElement> {
     image: string | StaticImageData;
-    category: ShoeCategory
+    category: ProductCategoryType
 }
 
 const ShowCategory = ({image, category, ...rest}: props) => {
     const [hover, setHover] = React.useState(false);
+    const route = useRouter()
     return (
         <div
             {...rest}
             onMouseEnter={()=>setHover(true)}
             onMouseLeave={()=>setHover(false)}
             className={`w-full h-full min-h-[20vh] flex overflow-hidden rounded-xl ${rest.className ?? ""}`}
+            onClick={()=>route.push(`/products/${category}`)}
         >
             <Image
                 src={image}
